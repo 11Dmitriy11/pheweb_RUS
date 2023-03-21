@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+<title>About | {% include 'title.html' %}</title>
+<meta property="og:title" content="Об этом проекте | {% include 'title.html' %}" />
+{% endblock %}
+
+{% block contained %}
+<div class="row">
+    <div class="col-xs-12 col-sm-offset-1 col-sm-10">
+      {% include 'about/content.html' %}
+    </div>
+</div>
+{% endblock %}

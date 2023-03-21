@@ -1,0 +1,20 @@
+======= Exception ====
+Filepath /nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/serve/static/pheno-list.json of kind phenolist was requested but doesn't exist
+
+======= Traceback ====
+Traceback (most recent call last):
+  File "/nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/command_line.py", line 134, in main
+    run(sys.argv[1:])
+  File "/nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/command_line.py", line 124, in run
+    handlers[subcommand](argv[1:])
+  File "/nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/command_line.py", line 69, in serve
+    run(argv)
+  File "/nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/serve/run.py", line 135, in run
+    from .server import app
+  File "/nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/serve/server.py", line 49, in <module>
+    phenos = {pheno['phenocode']: pheno for pheno in get_phenolist()}
+  File "/nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/utils.py", line 52, in get_phenolist
+    filepath = filepath or get_filepath('phenolist')  # Allow override for unit testing
+  File "/nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/file_utils.py", line 32, in get_filepath
+    raise PheWebError("Filepath {} of kind {} was requested but doesn't exist".format(filepath, kind))
+pheweb.utils.PheWebError: Filepath /nfs/home/dusolcev/.local/lib/python3.8/site-packages/pheweb/serve/static/pheno-list.json of kind phenolist was requested but doesn't exist

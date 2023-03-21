@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block contained %}
+<div class="row" style="margin-top:7em">
+  <div class="col-xs-12">
+    <br><br>
+    <center>
+      <h2>Ошибка</h2>
+      {% if message %}
+      <p>{{ message }}</p>
+      {% else %}
+      <h4>Либо этой страницы не существует, либо вы только что обнаружили баг на нашем сервере.</h4><br>
+      {% endif %}
+      <br><br>
+      Если это что-то, о чем мы должны знать, мы были бы признательны, если бы вы <a href="mailto:pjvh@umich.com?subject=bug-pheweb">связались с нами</a>.<br>
+    </center>
+
+  </div>
+</div>
+{% endblock %}

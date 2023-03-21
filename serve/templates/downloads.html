@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+<title>Downloads | {% include 'title.html' %}</title>
+<meta property="og:title" content="Downloads | {% include 'title.html' %}" />
+{% endblock %}
+
+{% block contained %}
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-1 col-sm-10">
+    <div class="page-header">
+      <h1>Downloads</h1>
+    </div>
+
+    {% include 'about/bibliographies.html' %}
+
+    <div>
+      <ul class="nav nav-tabs">
+        <li class="active dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Sakaue, S. &amp; Kanai, M., et al. (2021) <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#sakaue-kanai-2021-bbj" data-toggle="tab">BBJ</a></li>
+            <li><a href="#sakaue-kanai-2021-eur" data-toggle="tab">European</a></li>
+            <li><a href="#sakaue-kanai-2021-meta" data-toggle="tab">Meta-analysis</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="#kanai2021" data-toggle="tab">Kanai, M., et al. (2021)</a></li>
+        <li class=""><a href="#sakaue2021" data-toggle="tab">Sakaue, S., et al. (2021)</a></li>
+        <li class=""><a href="#okada2014" data-toggle="tab">Okada, Y., et al. (2014)</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane fade active in" id="sakaue-kanai-2021-bbj">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {% include 'downloads/sakaue-kanai-2021-bbj.html' %}
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="sakaue-kanai-2021-eur">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {% include 'downloads/sakaue-kanai-2021-eur.html' %}
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="sakaue-kanai-2021-meta">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {% include 'downloads/sakaue-kanai-2021-meta.html' %}
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="kanai2021">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {% include 'downloads/kanai2021.html' %}
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="sakaue2021">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {% include 'downloads/sakaue2021.html' %}
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="okada2014">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              {% include 'downloads/okada2014.html' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
